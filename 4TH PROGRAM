@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Simple Calculator</title>
+</head>
+<body>
+
+    <h3>Simple Calculator</h3>
+
+    <input id="a" type="number" placeholder="1st number">
+    <input id="b" type="number" placeholder="2nd number"><br><br>
+
+    <button onclick="add()">+</button>
+    <button onclick="sub()">-</button>
+    <button onclick="mul()">*</button>
+    <button onclick="div()">/</button>
+
+    <p id="res"></p>
+
+    <script>
+        function add() {
+            var x = Number(document.getElementById("a").value);
+            var y = Number(document.getElementById("b").value);
+            document.getElementById("res").innerText = "Result: " + (x + y);
+        }
+
+        function sub() {
+            var x = Number(document.getElementById("a").value);
+            var y = Number(document.getElementById("b").value);
+            document.getElementById("res").innerText = "Result: " + (x - y);
+        }
+
+        function mul() {
+            var x = Number(document.getElementById("a").value);
+            var y = Number(document.getElementById("b").value);
+            document.getElementById("res").innerText = "Result: " + (x * y);
+        }
+
+        function div() {
+            var x = Number(document.getElementById("a").value);
+            var y = Number(document.getElementById("b").value);
+            if (y === 0) {
+                document.getElementById("res").innerText = "Cannot divide by 0";
+            } else {
+                document.getElementById("res").innerText = "Result: " + (x / y);
+            }
+        }
+    </script>
+
+</body>
+</html>
