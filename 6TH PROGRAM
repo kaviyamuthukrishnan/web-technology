@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Form with Inputs</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f2f2f2;
+        }
+
+        .form-box {
+            background-color: #fff;
+            padding: 20px;
+            margin: 50px auto;
+            width: 350px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px gray;
+        }
+
+        h2 {
+            text-align: center;
+        }
+
+        label {
+            display: block;
+            margin-top: 10px;
+        }
+
+        input, select {
+            margin-top: 5px;
+            width: 100%;
+            padding: 8px;
+        }
+
+        .checkbox-group, .radio-group {
+            margin-top: 10px;
+        }
+
+        .checkbox-group label,
+        .radio-group label {
+            display: inline-block;
+            margin-right: 10px;
+        }
+
+        input[type="submit"] {
+            background-color: #007BFF;
+            color: white;
+            border: none;
+            margin-top: 15px;
+            cursor: pointer;
+        }
+
+        input[type="submit"]:hover {
+            background-color: #0056b3;
+        }
+    </style>
+</head>
+<body>
+
+<div class="form-box">
+    <h2>User Preferences Form</h2>
+    <form>
+        <label for="name">Name:</label>
+        <input type="text" id="name" name="name">
+
+        <label>Gender:</label>
+        <div class="radio-group">
+            <label><input type="radio" name="gender" value="Male"> Male</label>
+            <label><input type="radio" name="gender" value="Female"> Female</label>
+        </div>
+
+        <label>Hobbies:</label>
+        <div class="checkbox-group">
+            <label><input type="checkbox" name="hobbies" value="Reading"> Reading</label>
+            <label><input type="checkbox" name="hobbies" value="Music"> Music</label>
+            <label><input type="checkbox" name="hobbies" value="Traveling"> Traveling</label>
+        </div>
+
+        <label for="city">Select City:</label>
+        <select id="city" name="city">
+            <option value="">--Select City--</option>
+            <option>Chennai</option>
+            <option>Delhi</option>
+            <option>Mumbai</option>
+            <option>Bangalore</option>
+        </select>
+
+        <input type="submit" value="Submit">
+    </form>
+</div>
+
+</body>
+</html>
